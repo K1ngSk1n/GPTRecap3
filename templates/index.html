@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload new File</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <img src="/static/images/logolr.png" alt="logo" </img>
+        <h1>Welcome to GPT Recap!</h1>
+        <form method="post" enctype="multipart/form-data">
+            <label for="apikey">API Key</label>
+            <input type="text" id="apikey" name="apikey" placeholder="Enter API Key here">
+            
+            <label for="file">Upload File</label>
+            <input type="file" id="file" name="file">
+            
+            <label for="prompt-type">Select Prompt Type</label>
+            <select id="prompt-type" name="prompt-type" onchange="updatePrompt()">
+                <option value="custom">Custom</option>
+                <option value="friends">Friends Chat</option>
+                <option value="work">Work Chat</option>
+            </select>
+            
+            <label for="prompt">Prompt</label>
+            <textarea id="prompt" name="prompt" rows="6" placeholder="Enter prompt here"></textarea>
+            
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
