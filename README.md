@@ -43,7 +43,7 @@ GPT Recap is a web application and iOS shortcut built with Flask and powered by 
 ### Install dependencies
     pip install -r requirements.txt
 
-### Usage
+## Usage
 ### Running the application
 Run the flask app with Gunicorn
 gunicorn --bind 0.0.0.0:8008 run:app
